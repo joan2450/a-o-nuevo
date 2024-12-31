@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Interactivo</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            perspective: 1000px;
+        }
+
+        .envelope {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: #d1a684;
+            border-radius: 10px;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            transition: transform 1s ease-in-out;
+        }
+
+        .top-flap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: #b07a5c;
+            transform-origin: bottom;
+            transform: rotateX(0deg);
+            transition: transform 1s ease-in-out;
+        }
+
+        .front-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+            pointer-events: none;
+        }
+
+        .letter {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transform: translateY(0);
+            transition: transform 1s ease-in-out;
+        }
+
+        .letter-content {
+            padding: 20px;
+            text-align: center;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .envelope:hover {
+            transform: rotateX(-150deg);
+        }
+
+        .envelope:hover .top-flap {
+            transform: rotateX(-180deg);
+        }
+
+        .envelope:hover .letter {
+            transform: translateY(-100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="envelope">
+            <div class="top-flap"></div>
+            <div class="front-text">Feliz 2025, señorita</div>
+            <div class="letter">
+                <div class="letter-content">
+                    <!-- Mensaje dentro de la carta -->
+                    <h2>¡Feliz Año Nuevo!</h2>
+                    <p>Te diría Feliz Año Nuevo, pero eso lo puedes escuchar de cualquier persona.  
+                    Espero que el 2025 sea tu año donde más momentos bonitos y felices lleguen a tu vida.  
+                    Espero que puedas con todas las dificultades que podrán venir, y que sigas siendo esa persona tan bonita que está a tu lado en tu peor momento.</p>
+                    <p>Solo me queda agradecerte por los momentos que pasaron, por la experiencia y los sentimientos que dejaste y sigues dejando cada día.  
+                    Espero que todos tus sueños y metas los puedas alcanzar, ya sea a largo o corto plazo.</p>
+                    <p>Por último, que tengas una linda noche, así de linda como tú lo eres cada día, con cariño sebas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
